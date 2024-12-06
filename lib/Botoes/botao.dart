@@ -8,6 +8,7 @@ class Botao extends StatefulWidget {
 }
 
 class _BotaoState extends State<Botao> {
+  List<bool> pressionado = [false, false, false, false, false, false];
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -15,52 +16,143 @@ class _BotaoState extends State<Botao> {
       child: Row(
         children: [
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: pressionado[0]
+                  ? const Color.fromARGB(255, 255, 247, 171).withOpacity(0.8)
+                  : Color.fromARGB(255, 177, 213, 247).withOpacity(0.5),
+              side: BorderSide(
+                  color: pressionado[0] ? Color(0xFFF3C623) : Color(0xFF10375C),
+                  width: 2),
+            ),
             onPressed: () {
-              print("Botão 1 pressionado");
+              setState(() {
+                pressionado[0] = !pressionado[0];
+                //Se o botão for pressionado então ele vai receber o valor contrário da variável "pressionado"
+              });
             },
-            child: const Text("Acre"),
+            child: Text(
+              "Acre",
+              style: TextStyle(
+                color: pressionado[0] ? Color(0xFFF3C623) : Color(0xFF10375C),
+              ),
+            ),
           ),
           const SizedBox(
             width: 5,
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: pressionado[1]
+                  ? const Color.fromARGB(255, 255, 247, 171).withOpacity(0.8)
+                  : Color.fromARGB(255, 177, 213, 247).withOpacity(0.5),
+              side: BorderSide(
+                  color: pressionado[1] ? Color(0xFFF3C623) : Color(0xFF10375C),
+                  width: 2),
+            ),
             onPressed: () {
-              print("Botão 2 pressionado");
+              setState(() {
+                pressionado[1] = !pressionado[1];
+              });
             },
-            child: const Text("Amazônia"),
+            child: Text(
+              "Amazônia",
+              style: TextStyle(
+                color: pressionado[1] ? Color(0xFFF3C623) : Color(0xFF10375C),
+              ),
+            ),
           ),
           const SizedBox(
             width: 5,
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: pressionado[2]
+                  ? const Color.fromARGB(255, 255, 247, 171).withOpacity(0.8)
+                  : Color.fromARGB(255, 177, 213, 247).withOpacity(0.5),
+              side: BorderSide(
+                  color: pressionado[2] ? Color(0xFFF3C623) : Color(0xFF10375C),
+                  width: 2),
+            ),
             onPressed: () {
-              print("Botão 3 pressionado");
+              setState(() {
+                pressionado[2] = !pressionado[2];
+              });
             },
-            child: Text("Pará"),
+            child: Text(
+              "Pará",
+              style: TextStyle(
+                color: pressionado[2] ? Color(0xFFF3C623) : Color(0xFF10375C),
+              ),
+            ),
           ),
           const SizedBox(
             width: 5,
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: pressionado[3]
+                  ? const Color.fromARGB(255, 255, 247, 171).withOpacity(0.8)
+                  : Color.fromARGB(255, 177, 213, 247).withOpacity(0.5),
+              side: BorderSide(
+                  color: pressionado[3] ? Color(0xFFF3C623) : Color(0xFF10375C),
+                  width: 2),
+            ),
             onPressed: () {
-              print("Botão 4 pressionado");
+              setState(() {
+                pressionado[3] = !pressionado[3];
+              });
             },
-            child: Text("Rondônia"),
+            child: Text(
+              "Rondônia",
+              style: TextStyle(
+                color: pressionado[3] ? Color(0xFFF3C623) : Color(0xFF10375C),
+              ),
+            ),
           ),
           const SizedBox(
             width: 5,
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: pressionado[4]
+                  ? const Color.fromARGB(255, 255, 247, 171).withOpacity(0.8)
+                  : Color.fromARGB(255, 177, 213, 247).withOpacity(0.5),
+              side: BorderSide(
+                  color: pressionado[4] ? Color(0xFFF3C623) : Color(0xFF10375C),
+                  width: 2),
+            ),
             onPressed: () {
-              print("Botão 5 pressionado");
+              setState(() {
+                pressionado[4] = !pressionado[4];
+              });
             },
-            child: Text("Roraima"),
+            child: Text(
+              "Roraima",
+              style: TextStyle(
+                color: pressionado[4] ? Color(0xFFF3C623) : Color(0xFF10375C),
+              ),
+            ),
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: pressionado[5]
+                  ? const Color.fromARGB(255, 255, 247, 171).withOpacity(0.8)
+                  : Color.fromARGB(255, 177, 213, 247).withOpacity(0.5),
+              side: BorderSide(
+                  color: pressionado[5] ? Color(0xFFF3C623) : Color(0xFF10375C),
+                  width: 2),
+            ),
             onPressed: () {
-              print("Botão 5 pressionado");
+              setState(() {
+                pressionado[5] = !pressionado[5];
+              });
             },
-            child: Text("Tocantins"),
+            child: Text(
+              "Tocantins",
+              style: TextStyle(
+                color: pressionado[5] ? Color(0xFFF3C623) : Color(0xFF10375C),
+              ),
+            ),
           ),
         ],
       ),
