@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter  # Define o SDK do Flutter separadamente
   flutter_rating_bar: ^4.0.1  # Depende do pacote de RatingBar
   cupertino_icons: ^1.0.8  # Adiciona o pacote Cupertino Icons
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:

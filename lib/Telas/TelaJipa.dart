@@ -1,3 +1,4 @@
+import 'package:atividade_appcidades/Telas/ComponentesDaTelaJipa/Avaliacao.dart';
 import 'package:atividade_appcidades/Telas/ComponentesDaTelaJipa/CidadeJipa.dart';
 import 'package:flutter/material.dart';
 import 'package:atividade_appcidades/Barras/barraDeNavegacao.dart';
@@ -38,6 +39,8 @@ class _TelajipaState extends State<Telajipa> {
           ),
           SizedBox(height: 5),
           Informacoesadicionais(),
+          SizedBox(height: 3),
+          Avaliacao(),
         ],
       ),
       bottomNavigationBar: BarraDeNavegacao(),
