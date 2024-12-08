@@ -53,18 +53,12 @@ class _AvaliacaoState extends State<Avaliacao> {
             ),
           ),
           SizedBox(height: 2),
-          Container(
-            height: 60,
-            width: 360,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey),
-              borderRadius: BorderRadius.circular(20),
-            ),
+          const Padding(
+            padding: EdgeInsets.only(left: 7, right: 7, bottom: 5, top: 5,),
             child: const TextField(
               decoration: InputDecoration(
+                border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                 labelText: "Digite a sua avaliação",
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
               ),
             ),
           ),

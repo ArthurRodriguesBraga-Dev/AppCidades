@@ -18,7 +18,7 @@ class _TelajipaState extends State<Telajipa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(200), // Altura personalizada
+        preferredSize: const Size.fromHeight(200), 
         child: AppBar(
           flexibleSpace: Imagens(), // Widget para preencher a AppBar
           actions: const [
