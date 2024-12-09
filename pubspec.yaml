@@ -30,47 +30,50 @@ environment:
 dependencies:
   flutter:
     sdk: flutter  # Define o SDK do Flutter separadamente
-  flutter_rating_bar: ^4.0.1  # Depende do pacote de RatingBar
-  cupertino_icons: ^1.0.8  # Adiciona o pacote Cupertino Icons
-  carousel_slider: ^4.2.1
-
+  flutter_rating_bar: ^4.0.1  # Adiciona suporte para um widget de avaliação com estrelas
+  cupertino_icons: ^1.0.8  # Pacote para usar ícones no estilo Cupertino (iOS)
+  carousel_slider: ^4.2.1  # Biblioteca para sliders/carrosséis
+# Pacotes e configurações de desenvolvimento, não incluídos na aplicação final.
 dev_dependencies:
   flutter_test:
-    sdk: flutter
+    sdk: flutter # Permite realizar testes unitários e de widgets no Flutter
+  flutter_lints: ^4.0.0 # Configurações para boas práticas de código (lints)
+  
+  flutter_native_splash: ^2.4.3
+  flutter_launcher_icons: ^0.14.2 
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+flutter_native_splash:
+  color: "#1e1d1d"
+  image: assets/icon/icon.png
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icon/icone.png
+  adaptative_icon_background: "#1e1d1d"  
+  adaptative_icon_foreground: assets/icon/Logo_foreground.png
 # The following section is specific to Flutter packages.
 flutter:
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  uses-material-design: true # Inclui suporte para ícones do Material Design
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+    - assets/ # Diretório onde estão os recursos (imagens, ícones, etc.)
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/to/asset-from-package 
+  # Para obter detalhes sobre como adicionar recursos de dependências de pacotes, consulte
+  # https://flutter.dev/to/asset-from-package
 
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
+  # Para adicionar fontes personalizadas ao seu aplicativo, adicione uma seção de fontes aqui,
+  # nesta seção "flutter". Cada entrada nesta lista deve ter uma chave "family"
+  # com o nome da família da fonte e uma chave "fonts" com uma lista fornecendo
+  # o ativo e outros descritores para a fonte. Por exemplo:
   # fonts:
   #   - family: Schyler
   #     fonts:
@@ -83,5 +86,5 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package
+  # Para obter detalhes sobre fontes de dependências de pacotes,
+  # consulte https://flutter.dev/to/font-from-package
